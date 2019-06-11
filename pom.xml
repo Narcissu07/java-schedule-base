@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.tr</groupId>
+		<artifactId>common-pom</artifactId>
+		<version>1.0</version>
+	</parent>
+	<artifactId>schedule</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0</version>
+
+	<properties>
+		<schedule.version>1.0</schedule.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.tr</groupId>
+				<artifactId>schedule-api</artifactId>
+				<version>${schedule.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.tr</groupId>
+				<artifactId>schedule-biz</artifactId>
+				<version>${schedule.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.tr</groupId>
+				<artifactId>schedule-dal</artifactId>
+				<version>${schedule.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.tr</groupId>
+				<artifactId>schedule-common</artifactId>
+				<version>${schedule.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.tr</groupId>
+				<artifactId>common-code</artifactId>
+				<version>${common-code.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<modules>
+		<module>schedule-api</module>
+		<module>schedule-biz</module>
+		<module>schedule-dal</module>
+		<module>schedule-common</module>
+	</modules>
+</project>
